@@ -5,7 +5,14 @@ def find_fibonacci(x: int) -> bool:
     Jika tidak ada, maka kembalikan False
     """
     # write your code here
-
+    FibSeries = [0,1]
+    for n in range(2,100): 
+        new_series = FibSeries[n-1] + FibSeries[n-2]
+        FibSeries.append(new_series)
+    if x in FibSeries:
+        return True
+    else:
+        return False   
 
 if __name__ == "__main__":
     """Jalankan beberapa test-case di bawah sini
